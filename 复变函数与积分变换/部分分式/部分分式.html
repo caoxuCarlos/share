@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://www.shuxuele.com/algebra/partial-fractions.html -->
+<html><!-- #BeginTemplate "../Templates/Advanced.dwt" --><!-- DW6 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- #BeginEditable "doctitle" -->
+<title>部分分式</title>
+<meta name="Description" content="用简浅易明的语言解释数学，辅以迷题、游戏、测验、工作表和论坛。 适合幼幼儿园到高中的孩子、老师和家长。">
+<!-- #EndEditable -->
+<link rel="shortcut icon" type="image/x-icon" href="https://www.shuxuele.com/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="HandheldFriendly" content="true">
+<link rel="stylesheet" type="text/css" href="./部分分式_files/style4.css">
+<script async="" src="./部分分式_files/analytics.js.下载"></script><script src="./部分分式_files/main4.js.下载" type="text/javascript"></script>
+<style type="text/css">
+:root header#hdr + #main > div[data-hveid],
+:root #content > #center > .dose > .dosesingle,
+:root #content > #right > .dose > .dosesingle
+{ display: none !important; }</style></head>
+
+<body id="bodymain" class="adv">
+<script type="text/javascript">doBodyStt();</script><div id="hdr"></div><div id="logo"><a href="http://www.shuxuele.com/"><img src="./部分分式_files/logo.svg" alt="数学乐"></a></div><div id="menuWide" class="menu"><ul><li><a href="https://www.shuxuele.com/index.html">主页</a></li><li><a href="https://www.shuxuele.com/activity/index.html">活动</a></li><li><a href="https://www.shuxuele.com/algebra/index.html">代数</a></li><li><a href="https://www.shuxuele.com/calculus/index.html">微积分</a></li><li><a href="https://www.shuxuele.com/data/index.html">数据</a></li><li><a href="https://www.shuxuele.com/geometry/index.html">几何</a></li><li><a href="https://www.shuxuele.com/measure/index.html">测量</a></li><li><a href="https://www.shuxuele.com/money/index.html">钱</a></li><li><a href="https://www.shuxuele.com/numbers/index.html">数</a></li><li><a href="https://www.shuxuele.com/physics/index.html">物理</a></li></ul></div><div id="menuSlim" class="menu"><ul><li><a href="https://www.shuxuele.com/index.html">主页</a></li><li><a href="https://www.shuxuele.com/algebra/partial-fractions.html#">领域 ▼</a><ul><li><a href="https://www.shuxuele.com/activity/index.html">活动</a></li><li><a href="https://www.shuxuele.com/algebra/index.html">代数</a></li><li><a href="https://www.shuxuele.com/calculus/index.html">微积分</a></li><li><a href="https://www.shuxuele.com/data/index.html">数据</a></li><li><a href="https://www.shuxuele.com/geometry/index.html">几何</a></li><li><a href="https://www.shuxuele.com/measure/index.html">测量</a></li><li><a href="https://www.shuxuele.com/money/index.html">钱</a></li><li><a href="https://www.shuxuele.com/numbers/index.html">数</a></li><li><a href="https://www.shuxuele.com/physics/index.html">物理</a></li></ul></li><li><a href="https://www.shuxuele.com/algebra/partial-fractions.html#">更多 ▼</a><ul><li><a href="https://www.shuxuele.com/physics/index.html">物理</a></li></ul></li></ul></div><div id="menuTiny" class="menu">&nbsp;<a href="javascript:showMenu()" style="width: 48px; height: 48px;font: 36px Arial; background-color: rgba(255, 255, 255, 0.8); text-decoration: none; vertical-align: 30%; "><span style="border-top:-55px;  ">☰</span></a> </div>
+<div id="content" role="main">
+<!-- #BeginEditable "Body" -->
+  
+	<h1 align="center">部分分式分解</h1>
+	<p align="center"><i>一个"分解"含有多项式的分数的方法。</i></p>
+	<h2>什么是部分分式？</h2>
+	<p class="larger">我们可以直接<i>这样做</i>：</p>
+	<p align="center"><img src="./部分分式_files/partial-fractions-a.gif" alt="部分分式" width="347" height="60"></p>
+	<div class="example">
+	<p>像这样：</p>
+	  
+	  <p class="center large"><span class="intbl"><em>2</em>
+	  <strong>x−2</strong></span> + <span class="intbl"><em>3</em>
+	  <strong>x+1</strong></span> = <span class="intbl">
+	  <em>2(x+1) + 3(x−2)</em>
+	  <strong>(x−2)(x + 1)</strong></span></p>
+	  <p>这便可以简化为：</p>
+	  <p class="center large">= <span class="intbl">
+	<em>2x+2 + 3x−6</em>
+<strong>x<sup>2</sup>+x−2x−2</strong></span></p>
+<p class="center large">= <span class="intbl">
+		<em>5x−4</em>
+		<strong>x<sup>2</sup>−x−2</strong></span></p>
+<p>（去看<a href="https://www.shuxuele.com/algebra/rational-expression-operations.html">使用有理式</a>来了解更多。）</p>
+  </div>
+	<p>&nbsp;</p>
+	<div class="center80">
+	  <p align="center" class="large">……但倒转过来怎样做？</p>
+	  <p align="center" class="large"><img src="./部分分式_files/partial-fractions-b.svg" alt="部分分式">
+	  </p>
+	</div>
+	<p>以下我们将会探索：</p>
+	<p align="center" class="larger">怎样求一个分数的"各部分"<br>
+	  （"<b>部分分式</b>"）。</p>
+	<h2>为什么需要部分分式？</h2>
+	<p>首先……我们为什么需要部分分式？</p>
+	<p align="center" class="larger">因为每个部分分式都<b>比较简单</b>。</p>
+	<p>故此它们可以帮助我们去解比较复杂的分数。比方，在 <a href="https://www.shuxuele.com/calculus/integration-introduction.html">积分学</a>里，部分分式是非常有用的。</p>
+	<h2>部分分式分解</h2>
+	<p>我现在来做个示范。</p>
+	<p align="center">这叫<i>"部分分式分解"</i>，像这样：</p>
+	<table border="0">
+      <tbody><tr>
+        <td align="center"><img src="./部分分式_files/partial-fractions-1a.gif" alt="部分分式" width="187" height="45"></td>
+        <td>&nbsp;</td>
+        <td><b>一、</b>把下面化为因式。</td>
+      </tr>
+      <tr>
+        <td align="center">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center"><img src="./部分分式_files/partial-fractions-1b.gif" alt="部分分式" width="242" height="47"></td>
+        <td>&nbsp;</td>
+        <td><b>二、</b>每个因式写成一个部分分式</td>
+      </tr>
+      <tr>
+        <td align="center">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center"><img src="./部分分式_files/partial-fractions-1c.gif" alt="部分分式" width="244" height="29"></td>
+        <td>&nbsp;</td>
+        <td><b>三、</b> 全部乘以下面的式，之后式子不再是分数了</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center"><p><b>四、</b>现在来找常数！</p>
+          <p>代入下面的式子的根（"零点"）可能会有用：</p></td>
+    </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="./部分分式_files/partial-fractions-1d.gif" alt="部分分式" width="373" height="219"></td>
+    </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td align="center">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center"><b>得到答案了：</b></td>
+        <td>&nbsp;</td>
+        <td align="center"><img src="./部分分式_files/partial-fractions-1e.gif" alt="部分分式" width="223" height="46"></td>
+      </tr>
+  </tbody></table>
+	<p>&nbsp;</p>
+	<p>那相当容易！<b><i>……老实说，太容易了……</i></b></p>
+	<p align="center" class="larger">……其实它<b>可以非常困难</b>！</p>
+	<p>现在我们详细看每一步。</p>
+	<h2>真有理式</h2>
+	<p>这方法只适用于<b>真</b>有理式，就是上面的次数是<b>小于</b>下面的次数的有理式。</p>
+	<div class="def">
+	  <p align="center"><b>次数指数</b>。</p>
+  </div>
+	<ul class="larger">
+		<li><span class="large">真</span>：上面的次数是小于下面的次数。
+  <table border="0" align="center">
+      <tbody><tr align="center">
+        <td width="90">真：</td>
+        <td width="90"><img src="./部分分式_files/rational-proper-2.gif" width="66" height="46" alt="x / (x^3 - 1)"></td>
+        <td width="200">上面的次数是 1<br>
+          下面的次数是 3</td>
+    </tr>
+  </tbody></table>
+</li>
+	
+<li><span class="large">假</span>：上面的次数是大于或等于下面的次数。
+  <table border="0" align="center">
+      <tbody><tr align="center">
+        <td width="90">假：</td>
+        <td width="90"><img src="./部分分式_files/rational-improper-1.gif" width="65" height="51" alt="(x^2 - 1) / (x + 1)"></td>
+        <td width="200">上面的次数是 2<br>
+下面的次数是 1</td>
+      </tr>
+  </tbody></table>
+  </li>
+	</ul>
+	<p>若式子是假的，先去做<a href="https://www.shuxuele.com/algebra/polynomials-division-long.html">多项式长除</a>。</p>
+	<h2>把下面化为因式</h2>
+	<p>你自己来把下面化为因式。看<a href="https://www.shuxuele.com/algebra/factoring.html">代数因式分解</a>。</p>
+	<p>可是不要化为复数……你可能要把一些因式保留为二次式（叫"不可约二次因式"，因为再分解下去就会出现复数了）：</p>
+	<div class="example">
+	  <h3>例子：(x<sup>2</sup>-4)(x<sup>2</sup>+4)</h3>
+	  <ul>
+	    <div class="bigul">
+	      <li><b>x<sup>2</sup>-4</b> 可以分解为 (x-2)(x+2)</li>
+	      <li>但 <b>x<sup>2</sup>+4</b> 只可能分解为复数，所以不要把它分解</li>
+      </div>
+	  </ul>
+	  <p>&nbsp;</p>
+	  <p>我们只能做成这样：</p>
+	  <p align="center" class="large">(x-2)(x+2)(x<sup>2</sup>+4)</p>
+	  <p>&nbsp;</p>
+	</div>
+	<p>故此，因式可以是</p>
+	<ul>
+	  <li>线性因式，和</li>
+	  <li>不可约二次因式</li>
+  </ul>
+<p>的组合</p>
+	<p><b>当你有一个二项式，你便需要包括这部分分式：</b></p>
+
+<p class="center large"><span class="intbl"><em>B<sub>1</sub>x + C<sub>1</sub></em><strong>（你的二项式）</strong></span></p>
+<h2>有指数的因式</h2>
+	<p>有时候你可能得到一个有指数的因式，像 <b>(x-2)<sup>3</sup></b>……</p>
+	<div class="center80">
+	  <p align="center" class="larger">每个从 1 以上的指数都需要一个部分分式。</p>
+  </div>
+	<p>像这样：</p>
+	<div class="example">
+	  <h3>例子：</h3>
+
+<p class="center large"><span class="intbl"><em>1</em><strong>(x−2)<sup>3</sup>
+</strong></span></p>
+
+	  <div class="example2"></div>
+	  
+	  <p>有以下的部分分式：</p>
+<p class="center large"><span class="intbl"><em>A<sub>1</sub></em><strong>x−2</strong></span> + <span class="intbl"><em>A<sub>2</sub></em><strong>(x−2)<sup>2</sup></strong></span> + <span class="intbl"><em>A<sub></sub></em>
+<strong>(x−2)<sup>3</sup></strong></span></p>
+
+	</div>
+	<p>二次式也可以一样：</p>
+	<div class="example">
+      <h3>例子：</h3>
+
+<p class="center large"><span class="intbl"><em>1</em><strong>(x<sup>2</sup>+2x+3)<sup>2</sup></strong></span></p>
+<p>有以下的部分分式：</p>
+
+<p class="center large"><span class="intbl"><em>B<sub>1</sub>x + C<sub>1</sub></em><strong>x<sup>2</sup>+2x+3</strong></span> + <span class="intbl"><em>B<sub>2</sub>x + C<sub>2</sub></em><strong>(x<sup>2</sup>+2x+3)<sup>2</sup></strong></span></p>
+
+  </div>
+	<p>&nbsp;</p>
+	<h2>有时候用根也解不了</h2>
+	<p>就算用了下面部分的根（零点），你也可能得到未知的常数。</p>
+	<p>所以下一步是：</p>
+	<div class="center80">
+	  <p> 合并同类项（x 的指数是相同的项），然后以它为<a href="https://www.shuxuele.com/algebra/systems-linear-equations.html">线性方程组</a>来解。</p>
+  </div>
+	<p>&nbsp;</p>
+	<p>开玩笑！太复杂了！好，我们来看一个例子：</p>
+	<h2>复杂完整的例子</h2>
+    <p>一个复杂的例子！</p>
+
+<p class="center large"><span class="intbl"><em>x<sup>2</sup>+15</em><strong>(x+3)<sup>2 </sup>(x<sup>2</sup>+3)
+</strong></span></p>
+<ul>
+	<div class="bigul">
+	    <li>因为 <span class="large">(x+3)<sup>2</sup></span> 的指数是 2，它需要两项（<span class="large">A<sub>1</sub></span> 和 <span class="large">A<sub>2</sub></span>）。</li>
+	    <li>同时，<span class="large">(x<sup>2</sup>+3)</span> 是个二次式，所以也需要 <span class="large">Bx + C</span>：</li>
+    </div>
+</ul>
+
+<p class="center large"><span class="intbl"><em>x<sup>2</sup>+15</em><strong>(x+3)<sup>2</sup>(x<sup>2</sup>+3)</strong></span>&nbsp; = &nbsp;<span class="intbl"><em>A<sub>1</sub></em><strong>x+3</strong></span> + <span class="intbl"><em>A<sub>2</sub></em><strong>(x+3)<sup>2</sup></strong></span> + <span class="intbl"><em>Bx + C</em><strong>x<sup>2</sup>+3</strong></span></p>
+<p>全部乘以 <b>(x+3)<sup>2</sup>(x<sup>2</sup>+3)</b>:</p>
+	<p align="center"><span class="larger">x<sup>2</sup>+15 = (x+3)(x<sup>2</sup>+3)A<sub>1</sub> + (x<sup>2</sup>+3)A<sub>2</sub> + (x+3)<sup>2</sup>(Bx + C)</span></p>
+	<p>在<b>x = -3</b> 有个根（因为 x+3=0），所以用它试试：</p>
+	<p align="center"><span class="larger"><b>(-3)</b><sup>2</sup>+15 = 0 + (<b>(-3)</b><sup>2</sup>+3)A<sub>2</sub> + 0</span></p>
+	<p>简化为：</p>
+	<p align="center"><span class="larger">24 = 12A<sub>2</sub></span></p>
+	<p align="center">所以<span class="large"> A<sub>2</sub>=2</span></p>
+	<p>把<span class="large"> 2</span> 代入 <span class="large">A<sub>2</sub> </span>：</p>
+	<p align="center"><span class="larger">x<sup>2</sup>+15 = (x+3)(x<sup>2</sup>+3)A<sub>1</sub> + 2x<sup>2</sup>+6 + (x+3)<sup>2</sup>(Bx + C)</span></p>
+	<p>展开：</p>
+	<p align="center"><span class="larger">x<sup>2</sup>+15 = (x<sup>3</sup>+3x+3x<sup>2</sup>+9)A<sub>1</sub> + 2x<sup>2</sup>+6 + (x<sup>3</sup>+6x<sup>2</sup>+9x)B + (x<sup>2</sup>+6x+9)C</span></p>
+	<p>合并同类项（x的指数是相同的项）：</p>
+	<p align="center"><span class="larger">x<sup>2</sup>+15 = x<sup>3</sup>(A<sub>1</sub>+B)+x<sup>2</sup>(3A<sub>1</sub>+6B+C+2)+x(3A<sub>1</sub>+9B+6C)+(9A<sub>1</sub>+6+9C)</span></p>
+	<p>把每个 x 的指数分开来写，写成<a href="https://www.shuxuele.com/algebra/systems-linear-equations.html">线性方程组</a>：</p>
+	<table border="0" align="center">
+      <tbody><tr>
+        <td align="right"><span class="large">x<sup>3</sup>:</span></td>
+        <td align="right">&nbsp;</td>
+        <td align="right"><span class="larger"> 0 </span></td>
+        <td align="center"><span class="larger"> = </span></td>
+        <td><span class="larger">A<sub>1</sub>+B</span></td>
+      </tr>
+      <tr>
+        <td align="right"><span class="large">x<sup>2</sup>:</span></td>
+        <td align="right">&nbsp;</td>
+        <td align="right"><span class="larger"> 1 </span></td>
+        <td align="center"><span class="larger"> = </span></td>
+        <td><span class="larger">3A<sub>1</sub>+6B+C+2</span></td>
+      </tr>
+      <tr>
+        <td align="right"><span class="large">x:</span></td>
+        <td align="right">&nbsp;</td>
+        <td align="right"><span class="larger"> 0 </span></td>
+        <td align="center"><span class="larger"> = </span></td>
+        <td><span class="larger">3A<sub>1</sub>+9B+6C</span></td>
+      </tr>
+      <tr>
+        <td align="right"><span class="large">常数：</span></td>
+        <td align="right">&nbsp;</td>
+        <td align="right"><span class="larger"> 15 </span></td>
+        <td align="center"><span class="larger"> = </span></td>
+        <td><span class="larger">9A<sub>1</sub>+6+9C</span></td>
+      </tr>
+  </tbody></table>
+	<p>简化并整齐地重排：</p>
+	<table border="0" align="center">
+      <tbody><tr>
+        <td align="right" class="larger"> 0 </td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">B</td>
+        <td width="30" align="center" class="larger">&nbsp;</td>
+        <td align="right" class="larger">&nbsp;</td>
+    </tr>
+      <tr>
+        <td align="right" class="larger"> -1 </td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">3A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">6B</td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">C</td>
+    </tr>
+      <tr>
+        <td align="right" class="larger"><span class="larger"> 0 </span></td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">3A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">9B</td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">6C</td>
+    </tr>
+      <tr>
+        <td align="right" class="larger"> 1 </td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">&nbsp;</td>
+        <td align="right" class="larger">&nbsp;</td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">C</td>
+    </tr>
+  </tbody></table>
+	<p><b>好了，去解它！</b></p>
+	<p>你可以用你喜欢的方法去解……我就先从第二个方程减去第四个方程：</p>
+	<table border="0" align="center">
+      <tbody><tr>
+        <td align="right" class="larger"> 0 </td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">B</td>
+        <td width="30" align="center" class="larger">&nbsp;</td>
+        <td align="right" class="larger">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right" class="larger"><b> -2 </b></td>
+        <td width="30" align="center" class="larger"><b> = </b></td>
+        <td align="right" class="larger"><b>2A<sub>1</sub></b></td>
+        <td width="30" align="center" class="larger"><b>+</b></td>
+        <td align="right" class="larger"><b>6B</b></td>
+        <td width="30" align="center" class="larger">&nbsp;</td>
+        <td align="right" class="larger">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right" class="larger"> 0 </td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">3A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">9B</td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">6C</td>
+      </tr>
+      <tr>
+        <td align="right" class="larger"> 1 </td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">&nbsp;</td>
+        <td align="right" class="larger">&nbsp;</td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">C</td>
+      </tr>
+  </tbody></table>
+	<p>把第一个方程乘以 2，把结果从第二个方程减去：</p>
+	<table border="0" align="center">
+      <tbody><tr>
+        <td align="right" class="larger"> 0 </td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">B</td>
+        <td width="30" align="center" class="larger">&nbsp;</td>
+        <td align="right" class="larger">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right" class="larger"><b> -2 </b></td>
+        <td width="30" align="center" class="larger"><b> = </b></td>
+        <td align="right" class="larger">&nbsp;</td>
+        <td width="30" align="center" class="larger">&nbsp;</td>
+        <td align="right" class="larger"><b>4B</b></td>
+        <td width="30" align="center" class="larger">&nbsp;</td>
+        <td align="right" class="larger">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right" class="larger"> 0 </td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">3A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">9B</td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">6C</td>
+      </tr>
+      <tr>
+        <td align="right" class="larger"> 1 </td>
+        <td width="30" align="center" class="larger"> = </td>
+        <td align="right" class="larger">A<sub>1</sub></td>
+        <td width="30" align="center" class="larger">&nbsp;</td>
+        <td align="right" class="larger">&nbsp;</td>
+        <td width="30" align="center" class="larger">+</td>
+        <td align="right" class="larger">C</td>
+      </tr>
+  </tbody></table>
+	<p>现在我们知道 <b>B = -(1/2)</b>。</p>
+	<p>所以，从第一个方程我们可以算出 <b>A<sub>1</sub> = +(1/2)</b>。</p>
+	<p>接着，从第四个方程我们可以算出 <b>C = +(1/2)</b>。</p>
+	
+	<p>最后结果：</p>
+	<table border="0" align="center">
+      <tbody><tr>
+        <td width="120" align="center" class="large">A<sub>1</sub>=1/2</td>
+        <td width="120" align="center" class="large">A<sub>2</sub>=2</td>
+        <td width="120" align="center" class="large">B=−(1/2)</td>
+        <td width="120" align="center" class="large">C=1/2</td>
+      </tr>
+  </tbody></table>
+	<p>&nbsp;</p>
+	<p>我们终于得到所有部分分式了：</p>
+	<p class="center large"><span class="intbl">
+		<em>x<sup>2</sup>+15</em>
+		<strong>(x+3)<sup>2</sup>(x<sup>2</sup>+3)</strong>
+		</span>&nbsp; = &nbsp;<span class="intbl">
+			<em>1</em>
+			<strong>2(x+3)</strong>
+			</span> + <span class="intbl">
+				<em>2</em>
+				<strong>(x+3)<sup>2</sup></strong>
+				</span> + <span class="intbl">
+					<em>−x + 1</em>
+					<strong>2(x<sup>2</sup>+3)</strong>
+				</span></p>
+	
+	<p><b>唷！</b>精疲力竭，但终于做好了！</p>
+	<p align="right"><i>（附注：我花了<b>差不多<br>
+	  一个小时</b>来做这个，因为<br>
+	  当中我犯了两个错误 ！）</i></p>
+	<h2>总结</h2>
+	
+<ul class="larger">
+    <li>以<b>真</b>有理式来开始（若不是真有理式，先做多项式长除）</li>
+      <li>因式分解下面的式子：
+        <ul><li>线性因式</li>
+          <li>或/和"不可约"二次因式</li>
+          </ul>
+      </li>
+      <li>每个因式（和每个因式的次方）写成一个部分分式</li>
+      <li>全部乘以下面的式子</li>
+      <li>用以下方法来解系数：
+        <ul>
+          <li>代入下面的式子的根</li>
+          <li>把每个幂（x 的次方）的系数写成一个方程，形成一个线性方程组，然后解它</li>
+          </ul>
+      </li>
+      <li>答案就出来了！</li>
+</ul>
+<div class="questions"> 
+	
+	<script type="text/javascript">getQ(8073, 8074, 8075, 8076, 8077, 8078, 1259, 612, 613, 1260);</script><a href="javascript:doQ(8073,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题1&nbsp;</a> <a href="javascript:doQ(8074,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题2&nbsp;</a> <a href="javascript:doQ(8075,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题3&nbsp;</a> <a href="javascript:doQ(8076,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题4&nbsp;</a> <a href="javascript:doQ(8077,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题5&nbsp;</a> <a href="javascript:doQ(8078,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题6&nbsp;</a> <a href="javascript:doQ(1259,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题7&nbsp;</a> <a href="javascript:doQ(612,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题8&nbsp;</a> <a href="javascript:doQ(613,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题9&nbsp;</a> <a href="javascript:doQ(1260,&#39;8073_8074_8075_8076_8077_8078_1259_612_613_1260&#39;)">问题10&nbsp;</a> &nbsp;
+
+  </div>
+    
+	<div class="related">
+<a href="https://www.shuxuele.com/algebra/index.html">代数索引</a>
+<a href="https://www.shuxuele.com/algebra/index-2.html">代数2索引</a>
+
+</div>
+<!-- #EndEditable -->
+</div>
+<div id="copyrt">版权所有 © 2017 MathsIsFun.com</div>
+<script type="text/javascript">doBodyEnd();</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-87346497-1', 'auto');ga('send', 'pageview');</script><div id="footMenu"><a href="http://www.mathsisfun.com/algebra/partial-fractions.html" style="">English</a> :: <a href="https://www.shuxuele.com/about.html">关于</a> :: <a href="https://www.shuxuele.com/contact.php">联系</a> :: <a href="https://www.shuxuele.com/privacy.html">隐私</a></div><br>
+
+<!-- #EndTemplate -->
+</body></html>
